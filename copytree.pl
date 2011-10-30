@@ -1,11 +1,13 @@
-# enter you destination base folder
+# enter your destination base folder
 # and your source root folder
 # don't forget double backslashes
 my $dest = "C:\\eithans\\Projects\\Add levante C1\\a139\\";
 my $root = "linux-2.6.32";
-# my $root = "obm_v_122";
-my $dest_env = "C:\\eithans\\Personal\\Programs\\copytree\\dest.txt";
 
+# destination enviroment file
+# Set a path for your destination enviroment file. Will contain current
+# defualt destination to copy tree to.
+my $dest_env = "C:\\eithans\\Personal\\Programs\\copytree\\dest.env";
 
 
 use strict;
@@ -18,8 +20,7 @@ use File::Path;
 print("Copy Tree\n");
 print "---------------\n";
 my $fullpath = $ARGV[0];
-if ($ARGV[1] eq "-d")
-# is dir
+if ($ARGV[1] eq "-d") #if is dir
 {
 	print("Destination Folder set to: $ARGV[0]\n");
 	open( FILE, "> $dest_env" ) or die "Can't open file: $!";
