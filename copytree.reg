@@ -1,0 +1,14 @@
+REGEDIT4
+
+
+[HKEY_CLASSES_ROOT\*\shell\copytree]
+@="--copytree"
+
+[HKEY_CLASSES_ROOT\*\shell\copytree\command]
+@="cmd.exe /c perl.exe c:\eithans\Personal\Programs\copytree\copytree.pl \"%L\" -f"
+
+[HKEY_CLASSES_ROOT\DIRECTORY\shell\copytree]
+@="--copytree-set destination"
+
+[HKEY_CLASSES_ROOT\DIRECTORY\shell\copytree\command]
+@="cmd.exe /c perl.exe c:\eithans\Personal\Programs\copytree\copytree.pl \"%L\" -d"
